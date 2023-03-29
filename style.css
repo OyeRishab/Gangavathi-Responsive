@@ -26,8 +26,14 @@ header {
 
 #menu-icon {
   /* position: relative; */
-  font-size: 1.5rem;
+  color: #f2f2f2;
+  font-size: 30px;
+  z-index: 2;
   display: none;
+}
+
+.navbar {
+  display: flex;
 }
 
 .navbar a {
@@ -66,7 +72,7 @@ header {
   position: relative;
   width: 100%;
   min-height: calc(100vh - 74px);
-  background-image: url("./images/gangavathi.webp");
+  background-image: url("./images/gangavathi.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
@@ -93,7 +99,8 @@ header {
 }
 
 #History h2,
-#Places h2 {
+#Places h2,
+#Food h2 {
   font-family: "Satisfy", cursive;
   font-size: 3.5rem;
   text-transform: capitalize;
@@ -113,7 +120,8 @@ header {
   flex-direction: column;
 }
 
-#Places h2 {
+#Places h2,
+#Food h2 {
   margin-bottom: 30px;
 }
 
@@ -123,6 +131,7 @@ header {
   justify-content: flex-start;
   gap: 25px;
   margin: 20px 10%;
+  margin-bottom: 60px;
 }
 
 .card {
@@ -139,7 +148,7 @@ header {
   background-color: #2f2f2f;
   background-position: center;
   background-size: cover;
-  border: #2f2f2f 4px solid;
+  /* border: #2f2f2f 4px solid; */
 }
 
 .card-text {
@@ -170,4 +179,100 @@ header {
 }
 #ci4 {
   background-image: url("./images/tiger.jpg");
+}
+
+#Food {
+  display: flex;
+  flex-direction: column;
+}
+
+.food-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 10%;
+  gap: 40px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.food-card {
+  max-width: 300px;
+  /* border: #2f2f2f solid 2px; */
+}
+
+.food-card h3 {
+  font-size: 2rem;
+}
+
+.food-card p {
+  font-size: 1.5rem;
+}
+
+.food-img {
+  width: 300px;
+  height: 300px;
+  background-color: #2f2f2f;
+}
+
+footer {
+  height: 200px;
+  width: 100%;
+  background-color: #2f2f2f;
+  color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-text {
+    width: 90%;
+  }
+  .card-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 760px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 660px) {
+  #Home h1 {
+    font-size: 6rem;
+  }
+  #Home h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 490px) {
+  #Home h1 {
+    font-size: 4rem;
+  }
+  #Home h2 {
+    font-size: 2rem;
+  }
+
+  footer h2 {
+    font-size: 1.2rem;
+  }
+  #logo {
+    display: none;
+  }
+  header {
+    justify-content: center;
+  }
 }
